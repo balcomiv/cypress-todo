@@ -1,8 +1,11 @@
 /// <reference types="cypress" />
 
 describe("Adding items to the todo list", () => {
-  it("adds two items", () => {
+  beforeEach(() => {
     cy.visit("https://sitepoint-editors.github.io/todo-app/");
+  });
+
+  it("adds two items", () => {
     cy.get(".new-todo").type("first item{enter}");
     cy.contains("li", "first item").should("be.visible");
     cy.get(".new-todo").type("second item{enter}");

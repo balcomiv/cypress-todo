@@ -1,9 +1,11 @@
 /// <reference types="cypress" />
 
 describe("My first test", () => {
-  it("the home page loads", () => {
+  beforeEach(() => {
     cy.visit("https://sitepoint-editors.github.io/todo-app/");
+  });
 
+  it("the home page loads", () => {
     cy.contains("h1", "todos", { matchCase: false });
 
     cy.contains("h1", /^Todos$/);
