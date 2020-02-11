@@ -2,7 +2,7 @@
 
 describe("Removing items from the todo list", () => {
   beforeEach(() => {
-    cy.visit("https://sitepoint-editors.github.io/todo-app/");
+    cy.visit("/");
   });
 
   it("can delete an item", () => {
@@ -14,7 +14,7 @@ describe("Removing items from the todo list", () => {
     cy.contains("li", "simple")
       .should("exist")
       .find(".destroy")
-      // use force: true because we don't want to hover
+      // use force: true because we don't want to hover (button is not visible)
       .click({ force: true });
 
     // confirm deleted item is gone from DOM

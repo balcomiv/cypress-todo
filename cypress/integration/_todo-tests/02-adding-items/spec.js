@@ -2,7 +2,7 @@
 
 describe("Adding items to the todo list", () => {
   beforeEach(() => {
-    cy.visit("https://sitepoint-editors.github.io/todo-app/");
+    cy.visit("/");
   });
 
   it("adds two items", () => {

@@ -2,7 +2,7 @@
 
 describe("My first test", () => {
   beforeEach(() => {
-    cy.visit("https://sitepoint-editors.github.io/todo-app/");
+    cy.visit("/");
   });
 
   it("the home page loads", () => {
